@@ -403,6 +403,20 @@ input[type="radio"].visually-hidden {
   border: 3px solid transparent;
 }
 
+.partners {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.partners__title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
 .brands-list {
   display: flex;
   flex-wrap: wrap;
@@ -417,6 +431,8 @@ input[type="radio"].visually-hidden {
   height: 130px;
   margin-right: 20px;
   margin-bottom: 20px;
+  
+  background-color: #ffffff;
   border: 1px solid #eaeaea;
 }
 
@@ -432,6 +448,25 @@ input[type="radio"].visually-hidden {
 
 .brand-item:active {
   opacity: 0.3;
+}
+
+.company {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.company__title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.company__text {
+  padding: 0;
+  margin: 0;
+  
+  text-indent: 40px;
+  line-height: 30px;
 }
 
 
