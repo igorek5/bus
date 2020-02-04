@@ -79,9 +79,12 @@ input[type="radio"].visually-hidden {
   padding-top: 10px;
   padding-bottom: 20px;
   
-  color: #000000;
+ color: #ffffff;
   
-  background-color: #f5f5f5;
+  background-color: #242424;
+  background-image: url("../img/footer/background-footer.jpg");
+  background-position: 0 0;
+  background-repeat: repeat;
   border-bottom: 1px solid #eaeaea;
 }
 
@@ -99,7 +102,7 @@ input[type="radio"].visually-hidden {
 .page-header__logo-link {
   font-size: 30px;
   line-height: 40px;
-  color: #000000;
+  color: #ffffff;
 }
 
 .page-header__logo-link:hover,
@@ -134,7 +137,7 @@ input[type="radio"].visually-hidden {
   line-height: 21px;
   color: #ee3643;
   
-  border: 3px solid #ffffff;
+  border: 3px solid #ee3643;
 }
 
 .page-header__phone-icon {
@@ -156,7 +159,7 @@ input[type="radio"].visually-hidden {
 }
 
 .page-header__phone:active .page-header__phone-icon {
-  opacity: 0.2;
+  opacity: 0.5;
 }
 
 .page-header__phone-text {
@@ -187,7 +190,7 @@ input[type="radio"].visually-hidden {
 }
 
 .site-list a {
-  color: #000000;
+  color: #ffffff;
 }
 
 .site-list a:hover,
