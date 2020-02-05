@@ -176,59 +176,7 @@
             </p>
           </div>
         </section>
-<!--
-        <section class="advantages">
-          <h2 class="advantages__title">Как это работает</h2>
-          <div class="advantages__wrapper">
-            <ul class="advantages__list">
-              <li class="advantages__item">
-                  <span class="advantages__image  advantages__image--first"></span>
-                <p class="advantages__text">Функциональное питание содержит только полезные питательные вещества.</p>
-              </li>
-              <li class="advantages__item">
-                  <span class="advantages__image advantages__item--second"></span>
-                   <p class="advantages__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
-              </li>
-              <li class="advantages__item">
-                  <span class="advantages__image advantages__image--three"></span>
-                <p class="advantages__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
-              </li>
-              <li class="advantages__item">
-                  <span class="advantages__image advantages__image--four"></span>
-                <p class="advantages__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
-              </li>
-            </ul>  
-          </div>
-        </section>
 
-        <section class="example">
-          <h2 class="example__title">Живой пример</h2>
-          <div class="example__wrapper slider-cat">
-            <p class="slider-cat__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-
-            <table class="slider-cat__table">
-              <tr>
-                <td class="slider-cat__value">5 кг</td>
-                <td class="slider-cat__value">60 дней</td>
-              </tr>
-              <tr>
-                  <td class="slider-cat__field">снижение<br>веса</td>
-                  <td class="slider-cat__field">затрачено<br>времени</td>
-              </tr>
-            </table>
-
-
-            <p class="slider-cat__costs">Затраты на питание: 15 000 руб.</p>
-            <img src="#" class="slider-cat__image--before-cat" alt="Кот Борис до">
-            <img src="#" class="slider-cat__image--after-cat" alt="Кот Борис после">
-            <span class="slider-cat__slider--before-cat">Было</span>
-            <span class="slider-cat__slider--after-cat">Стало</span>
-
-          </div>
-        </section>
-      </main>
-    </div>
-    -->
     </main>
         
     <footer class="main-footer">
@@ -239,10 +187,13 @@
           <a href="mailto:andrey170982@mail.ru">andrey170982@mail.ru</a>
         </div>
         
-        <ul class="footer__messengers-list">
-          <li><img width="40" height="40" src="img/footer/ic-whatsapp.svg"></li>
-          <li><img width="40" height="40" src="img/footer/ic-viber.svg"></li>
-        </ul>
+        <div class="footer__messengers">
+          <p class="footer__messengers-text">Messengers</p>
+          <ul class="footer__messengers-list">
+            <li><img width="40" height="40" src="img/footer/ic-whatsapp.svg"></li>
+            <li><img width="40" height="40" src="img/footer/ic-viber.svg"></li>
+          </ul>
+        </div>
         
         <div class="footer__copyright">2020 © autubus - пассажирские перевозки<br>
           <span>Предложение не является публичной офертой</span>
@@ -250,5 +201,57 @@
       </div>
     </footer>
     
+   <section class="modal modal__order">
+        <h2 class="modal__title">Заказ обратного звонка</h2>
+        <p class="modal__description">Введите пожалуйста свое имя и номер телефона, можете оставить комментарий</p>
+        
+        
+            <p class="modal__order-item">
+              <label class="visually-hidden" for="user-name">Ваше имя</label>
+              <input class="modal__input" id="user-name" type="text" name="name" value="" placeholder="Имя" required>
+            </p>
+            
+            <p class="modal__order-item">
+              <label class="visually-hidden" for="user-phone">Номер телефона</label>
+              <input class="modal__input" id="user-phone" type="tel" name="phone" value="" placeholder="Телефон" required>
+            </p>
+            
+            <p class="modal__order-item">
+              <label class="visually-hidden" for="user-text">Комментарии</label>
+              <textarea class="modal__input" id="user-text" name="message" rows="5" placeholder="Комментарий в свободной форме"></textarea>
+            </p>
+            <button class="button modal__button" type="button">Отправить</button>
+            
+            <div class="result"></div>
+     
+        
+        <button class="modal_close" type="button"><span class="visually-hidden">Закрыть</span></button>
+    </section>
+    
+    <div class="modal_overlay"></div>
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <script>window.JQuery || document.write('<script src="js/jquery-3.4.1.min.js"><\/script>');
+    </script>
+  
+    <script>
+        $('[type="button"]').click(function() {
+        $.post(
+          "submit.php",
+          {
+          name: $('[name="name"]').val(),
+          phone: $('[name="phone"]').val(),
+          message: $('[name="message"]').val()
+            },
+          
+          function( data ) {
+        $( ".result" ).html( data );
+      }
+          );
+    });
+    </script>
+  
   </body>
 </html>
