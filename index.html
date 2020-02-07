@@ -236,8 +236,10 @@
     <script>window.JQuery || document.write('<script src="js/jquery-3.4.1.min.js"><\/script>');
     </script>
   
+    <script src="js/popup.js"></script>
+    
     <script>
-        $('[type="button"]').click(function() {
+        $('.modal__button').click(function() {
         $.post(
           "submit.php",
           {
@@ -252,6 +254,8 @@
           );
     });
     </script>
+    
   
+    
   </body>
 </html>

@@ -527,7 +527,7 @@ input[type="radio"].visually-hidden {
 }
 
 .modal {
-  display: block;
+  display: none;
   
   text-align: center;
   color: #000000;
@@ -552,6 +552,10 @@ input[type="radio"].visually-hidden {
     
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
+}
+
+.modal-show {
+  display: block;
 }
 
 .modal__order {
