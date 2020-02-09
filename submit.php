@@ -1,3 +1,6 @@
+<!--	
+https://api.telegram.org/bot910847660:AAGcqPzqs9R1GtPR9MWMnEYLfBtJVvJ_uSE/getUpdates
+-->
 <?php
 if (!empty($_POST['name']) AND !empty($_POST['phone']) ){
   
@@ -8,7 +11,7 @@ $message = $_POST['message'];
 // $zakaz = "Заказ с сайты XXX";
 
 $token = "910847660:AAGcqPzqs9R1GtPR9MWMnEYLfBtJVvJ_uSE"; // Это ТОКЕН
-$chat_id = "918924559"; // Это ИД группы
+$chat_id = "-382013484"; // Это ИД группы
 
 $arr = array(
 
@@ -33,4 +36,7 @@ $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_i
 } else {
   echo "Ошибка: введите все поля!";
 }
+
+
+
 
