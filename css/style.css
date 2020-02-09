@@ -586,9 +586,9 @@ input[type="radio"].visually-hidden {
     margin-bottom: 10px;
     padding: 10px 35px 10px 15px;
     width: 100%;
+    
     font: inherit;
     color: #000000;
-    text-transform: uppercase;
     background-color: #f9f6f3;
     border: 2px solid #000000;
 }
