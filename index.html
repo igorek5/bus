@@ -33,22 +33,22 @@
 
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
-              <a href="#">Преимущества</a>
+              <a href="#advantages">Преимущества</a>
             </li>
             <li class="site-list__item">
-              <a href="catalog.html">Услуги</a>
+              <a href="#services">Услуги</a>
             </li>
             <li class="site-list__item">
-              <a href="catalog.html">Партнеры</a>
+              <a href="#partners">Партнеры</a>
             </li>
           </ul>
             
           <ul class="main-nav__list site-list site-list__bottom">
               <li class="site-list__item">
-                <a href="form.html">О Компании</a>
+                <a href="#company">О Компании</a>
               </li>
               <li class="site-list__item">
-                <a href="form.html">Контакты</a>
+                <a href="#contacts">Контакты</a>
               </li>
             </ul> 
         </nav>
@@ -71,9 +71,10 @@
         </div>
         
   
-        <section class="advantages">
+        <section class="advantages" id="advantages" >
           
           <div class="container">
+          <a name="advantages"></a>
           <h2 class="advantages__title">Преимущества нашей компании:</h2>
           
           <ul class="advantages__list">
@@ -95,7 +96,7 @@
           </div>
         </section>
         
-        <section class="services">
+        <section class="services" id="services">
           
           <div class="container">
             <h2 class="services__title">Услуги компании:</h2>
@@ -138,7 +139,7 @@
           </div>
         </section>
         
-        <section class="partners">
+        <section class="partners" id="partners">
           <div class="container">
             <h2 class="partners__title">Нам доверяют:</h2>
             
@@ -167,7 +168,7 @@
           </div>
         </section>
         
-        <section class="company">
+        <section class="company" id="company">
           <div class="container">
             <h2 class="company__title">О компании:</h2>
             
@@ -181,7 +182,7 @@
         
     <footer class="main-footer">
       <div class="container">
-        <div class="footer__contacts">
+        <div class="footer__contacts" id="contacts">
           <p>Свяжитесь с нами:</p>
           <a href="tel:+79038509998">+7 (903) 850-99-98</a><br>
           <a href="mailto:andrey170982@mail.ru">andrey170982@mail.ru</a>
@@ -205,7 +206,7 @@
         <h2 class="modal__title">Заказ обратного звонка</h2>
         <p class="modal__description">Введите пожалуйста свое имя и номер телефона, можете оставить комментарий</p>
         
-        
+       
             <p class="modal__order-item">
               <label class="visually-hidden" for="user-name">Ваше имя</label>
               <input class="modal__input" id="user-name" type="text" name="name" value="" placeholder="Имя" required>
@@ -221,7 +222,7 @@
               <textarea class="modal__input" id="user-text" name="message" rows="5" placeholder="Комментарий в свободной форме"></textarea>
             </p>
             <button class="button modal__button" type="button">Отправить</button>
-            
+      
             <div class="result"></div>
      
         
@@ -232,27 +233,21 @@
     
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
     <script>window.JQuery || document.write('<script src="js/jquery-3.4.1.min.js"><\/script>');
     </script>
-  
+    
     <script src="js/popup.js"></script>
+    <script src="js/ajaxform.js"></script>
     
     <script>
-        $('.modal__button').click(function() {
-        $.post(
-          "submit.php",
-          {
-          name: $('[name="name"]').val(),
-          phone: $('[name="phone"]').val(),
-          message: $('[name="message"]').val()
-            },
-          
-          function( data ) {
-        $( ".result" ).html( data );
-      }
-          );
-    });
+      $(document).ready(function(){
+      $(".main-nav").on("click","a", function (event) {
+          event.preventDefault();
+          var id  = $(this).attr('href'),
+              top = $(id).offset().top;
+          $('body,html').animate({scrollTop: top}, 1000);
+      });
+  });
     </script>
     
   
