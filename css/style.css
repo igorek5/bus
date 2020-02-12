@@ -100,9 +100,13 @@ input[type="radio"].visually-hidden {
 }
 
 .page-header__logo-link {
+  margin: 0;
+  padding: 0;
+  
   font-size: 30px;
   line-height: 40px;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .page-header__logo-link:hover,
@@ -228,8 +232,8 @@ input[type="radio"].visually-hidden {
 .preview__image {
   position: absolute;
   
-  top: 45px;
-  left: 300px;
+  top: 170px;
+  left: 330px;
   
   z-index: -1;
 }
@@ -438,6 +442,7 @@ input[type="radio"].visually-hidden {
   
   background-color: #ffffff;
   border: 1px solid #eaeaea;
+  cursor: pointer;
 }
 
 .brand-item:nth-child(5n) {
@@ -520,6 +525,15 @@ input[type="radio"].visually-hidden {
   margin: 0;
   
   list-style: none;
+}
+
+.messengers__link:hover,
+.messengers__link:focus {
+  opacity: 0.7;
+}
+
+.messengers__link:active {
+  opacity: 0.5;
 }
 
 .footer__copyright span {
@@ -612,6 +626,7 @@ input[type="radio"].visually-hidden {
 
 .modal__button {
   width: 100%;
+  margin-bottom: 10px;
   
   cursor: pointer;
 }

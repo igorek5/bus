@@ -13,17 +13,17 @@
       <div class="container">
       
         <div class="page-header__logo">
-          <a class="page-header__logo-link" href="#">auto<span>BUS 36</span></a>
+          <p class="page-header__logo-link" href="#">auto<span>BUS 36</span></p>
           <h1 class="page-header__title">Аренда автобуса в Воронеже</h1>
         </div>
         
         <div class="page-header__contacts">
-            <a class="page-header__phone" href="tel:+79038509998">
+            <a class="page-header__phone" href="tel:+79202257000">
               <svg class="page-header__phone-icon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
                 <path fill="#b7bfc8" d="M15.572 18.985h-.941c-4.129-.488-7.157-2.408-9.359-4.864C3.062 11.66 1.318 8.492.978 4.228V3.084c.078-.774.459-1.304.898-1.757C2.425.766 3.25.044 4.002.019c.554-.018 1.5.38 1.879.899.329.446.504 1.339.656 2.003.154.671.505 1.643.408 2.289-.148 1.007-1.487 1.434-1.879 2.166 1.307 3.135 3.443 5.439 6.293 7.031.715-.392 1.346-1.572 2.332-1.595.359-.009.818.178 1.184.286.402.121.75.275 1.104.408.596.224 1.648.521 2.004 1.021.365.513.57 1.356.49 1.879-.164 1.041-1.879 2.197-2.901 2.579z"/>
               </svg>
               
-              +7 (903) 850-99-98</a>
+              +7 (920) 225-70-00</a>
             <p class="page-header__phone-text">Работаем круглосуточно, звоните!</p>
           </div>
         <nav class="main-nav">
@@ -65,7 +65,7 @@
             
             <a href="#" class="preview__button button">Обратный звонок</a>
           </div>
-          <img class="preview__image" alt="PEUGEOT Boxer" src="img/preview/pegeuot-boxer.jpg">
+          <img class="preview__image" width="624" height="299" alt="PEUGEOT Boxer" src="img/preview/pegeuot-boxer.jpg">
           
         </section>
         </div>
@@ -116,7 +116,7 @@
               
               <div class="services__table">
             
-                <img class="services__table-img" width="280px" height="280px" src="img/services/bus_table.jpg" alt="#">
+                <img class="services__table-img" width="200px" height="147px" src="img/services/bus_table.jpg" alt="#">
        
                 <p class="services__table-text">С 2012 года везём всех! <br>Обратившись к нам вы получаете </p>
                 
@@ -145,25 +145,25 @@
             
             <div class="brands-list">
               
-              <a class="brand-item" href="#">
+              <div class="brand-item" href="#">
                 <img src="img/partners/logo-simens.jpg" width="140" height="60" alt="Simens">
-              </a>
+              </div>
 
-              <a class="brand-item" href="#">
+              <div class="brand-item" href="#">
                 <img src="img/partners/logo_protec.png" width="123" height="40" alt="Protec">
-              </a>
+              </div>
 
-              <a class="brand-item" href="#">
+              <div class="brand-item" href="#">
                 <img src="img/partners/logo_avtodor.jpg" width="146" height="44" alt="Avtodor">
-              </a>
+              </div>
 
-              <a class="brand-item" href="#">
+              <div class="brand-item" href="#">
                   <img src="img/partners/trans_logo.png" width="146" height="70" alt="transneft">
-              </a>
+              </div>
 
-              <a class="brand-item" href="#">
+              <div class="brand-item" href="#">
                   <img src="img/partners/rusgudro.jpg" width="140" height="32" alt="Rusgudro">
-              </a>
+              </div>
             </div>
           </div>
         </section>
@@ -184,15 +184,15 @@
       <div class="container">
         <div class="footer__contacts" id="contacts">
           <p>Свяжитесь с нами:</p>
-          <a href="tel:+79038509998">+7 (903) 850-99-98</a><br>
+          <a href="tel:+79202257000">+7 (920) 225-70-00</a><br>
           <a href="mailto:andrey170982@mail.ru">andrey170982@mail.ru</a>
         </div>
         
         <div class="footer__messengers">
           <p class="footer__messengers-text">Messengers</p>
           <ul class="footer__messengers-list">
-            <li><img width="40" height="40" src="img/footer/ic-whatsapp.svg"></li>
-            <li><img width="40" height="40" src="img/footer/ic-viber.svg"></li>
+            <li><a class="messengers__link" href="whatsapp://send?phone=+79038509998"><img width="40" height="40" src="img/footer/ic-whatsapp.svg"></a></li>
+            <li><a class="messengers__link" href="viber://add?number=79038509998"><img width="40" height="40" src="img/footer/ic-viber.svg"></a></li>
           </ul>
         </div>
         
@@ -206,7 +206,7 @@
         <h2 class="modal__title">Заказ обратного звонка</h2>
         <p class="modal__description">Введите пожалуйста свое имя и номер телефона, можете оставить комментарий</p>
         
-       
+       <form action="submit.php" id="order_form" method="post"> 
             <p class="modal__order-item">
               <label class="visually-hidden" for="user-name">Ваше имя</label>
               <input class="modal__input" id="user-name" type="text" name="name" value="" placeholder="Имя" required>
@@ -214,7 +214,7 @@
             
             <p class="modal__order-item">
               <label class="visually-hidden" for="user-phone">Номер телефона</label>
-              <input class="modal__input" id="user-phone" type="tel" name="phone" value="" placeholder="Телефон" required>
+              <input class="modal__input" id="user-phone" type="tel" name="phone" value="" placeholder="Телефон" pattern="2[0-9]{3}-[0-9]{3}" required>
             </p>
             
             <p class="modal__order-item">
@@ -222,7 +222,7 @@
               <textarea class="modal__input" id="user-text" name="message" rows="5" placeholder="Комментарий в свободной форме"></textarea>
             </p>
             <button class="button modal__button" type="button">Отправить</button>
-      
+   </form>  
             <div class="result"></div>
      
         
@@ -235,19 +235,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>window.JQuery || document.write('<script src="js/jquery-3.4.1.min.js"><\/script>');
     </script>
-    
     <script src="js/popup.js"></script>
     <script src="js/ajaxform.js"></script>
-    
-    <script>
-      $(document).ready(function(){
-      $(".main-nav").on("click","a", function (event) {
-          event.preventDefault();
-          var id  = $(this).attr('href'),
-              top = $(id).offset().top;
-          $('body,html').animate({scrollTop: top}, 1000);
-      });
-  });
+    <script src="js/scroll.js">
+     
     </script>
     
   

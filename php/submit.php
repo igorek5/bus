@@ -1,13 +1,35 @@
+<!--	
+https://api.telegram.org/bot910847660:AAGcqPzqs9R1GtPR9MWMnEYLfBtJVvJ_uSE/getUpdates
+-->
 <?php
-if (!empty($_post['name']) and !empty($_post['phone']) ){
+if (!empty($_POST['name']) AND !empty($_POST['phone']) ){
   
-  $theme = 'Новое сообщение';
+$name = $_POST['name'];
+$phone = $_POST['phone']; 
+$message = $_POST['message']; 
+
+// $zakaz = "Заказ с сайты XXX";
+
+$token = "910847660:AAGcqPzqs9R1GtPR9MWMnEYLfBtJVvJ_uSE"; // Это ТОКЕН
+$chat_id = "-382013484"; // Это ИД группы
+
+$arr = array(
+
+// 'Заказ с сайты: ' => $zakaz,
   
-  $letter = 'Имя: '.$_POST['name'].'\r\n';
-  $letter .= 'Телефон: '.$_POST['phone'].'\r\n';
-  $letter .= 'Сообщение: '.$_POST['message'].'\r\n';
+  'Имя: ' => $name,
+  'Телефон: ' => $phone,
+  'Сообщение: ' => $message
+);
+
+foreach($arr as $key => $value) {
+  $txt .= "<b>".$key."</b> ".$value."%0A";
+};
+
+$sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
   
- if (mail('igorbautin101@gmail.com', $theme, $letter)){
+  if ($sendToTelegram){
+    
    echo "Сообщение отправлено!";
 } else {
   echo "Ошибка при отправке!";
@@ -15,4 +37,7 @@ if (!empty($_post['name']) and !empty($_post['phone']) ){
 } else {
   echo "Ошибка: введите все поля!";
 }
+
+
+
 

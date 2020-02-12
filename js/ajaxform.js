@@ -1,6 +1,7 @@
-$('.modal__button').click(function() {
+$('.modal__button').click(function (evt) {
+  evt.preventDefault();
         $.post(
-          "submit.php",
+          "php/submit.php",
           {
           name: $('[name="name"]').val(),
           phone: $('[name="phone"]').val(),
@@ -8,6 +9,7 @@ $('.modal__button').click(function() {
             },
           
           function( data ) {
+        $('#order_form')[0].reset();
         $( ".result" ).html( data );
       }
           );
